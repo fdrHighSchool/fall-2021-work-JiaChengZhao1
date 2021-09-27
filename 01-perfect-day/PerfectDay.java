@@ -1,7 +1,12 @@
 public class PerfectDay {
   public static void main(String[] args) {
     System.out.println("Here's my perfect day:");
+    morning();
+    afternoon();
+    night();
   }//end main method
+
+
   public static void morning() {
     System.out.print("In the morning");
     System.out.println("I would wake up late and skip breakfast");
