@@ -9,9 +9,9 @@ public class RocketShip {
 
 
   public static void Triangle(){
-    System.out.println("     / \\");
-    System.out.println("    /   \\");
-    System.out.println("   /     \\");
+    System.out.println("     /\\");
+    System.out.println("    /  \\");
+    System.out.println("   /    \\");
   }//end triangle method
 
   public static void Square(){
@@ -34,8 +34,8 @@ public class RocketShip {
   }
 
   public static void Triangle2(){
-    System.out.println("     / \\");
-    System.out.println("    /   \\");
-    System.out.println("   /     \\");
+    System.out.println("     /\\");
+    System.out.println("    /  \\");
+    System.out.println("   /    \\");
   }
 }
