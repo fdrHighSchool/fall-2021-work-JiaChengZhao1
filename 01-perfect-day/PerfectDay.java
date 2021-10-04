@@ -8,7 +8,7 @@ public class PerfectDay {
 
 
   public static void morning() {
-    System.out.print("In the morning");
+    System.out.print("In the morning,");
     System.out.println("I would wake up late and skip breakfast");
     System.out.println("I will play games and watch videos for a hour");
   }//end morning method
