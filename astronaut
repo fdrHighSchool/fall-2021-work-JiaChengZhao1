@@ -1,0 +1,35 @@
+PShape square;  // The PShape object
+
+void setup() {
+  size(1000, 800);
+  background(250,240,230);
+  // Creating the PShape as a square. The
+  // numeric arguments are similar to rect().
+  square = createShape(RECT, 0, 0, 50, 50);
+  square.setFill(color(128, 138, 105));
+  square.setStroke(false);
+}
+
+void draw() {
+
+fill(202,235,216);
+ellipse(500, 200, 140, 120);  // Draw white ellipse using RADIUS mode
+
+fill(0,255,226);  // Set fill to gray
+ellipse(500,200, 120, 110); 
+
+fill(255,255,255);
+rect(430, 240, 140, 90);
+
+fill(255,255,255);
+rect(452, 240, 96, 130);
+
+fill(255,255,255);
+rect(452, 370, 35, 80);
+
+fill(255,255,255);
+rect(513, 370, 35, 80);
+
+fill(202,235,216);
+ellipse(480, 270, 40, 30); 
+}
