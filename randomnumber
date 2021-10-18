@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class test{
+    public static void main(String[] args) {
+      // System.out.println((int)(Math.random()6 + 1));
+
+      // create an instance of the Scanner class
+      Scanner s = new Scanner(System.in);
+
+      // ask user how many groups
+      System.out.println("How many groups?");
+      int numGroups = s.nextInt();
+      // System.out.println(numGroups);
+       System.out.println("ENTER NUMBER?");
+      // determine random group number
+      int randomChoice = (int)(Math.random()*numGroups + 1);
+while(true){
+int result= s.nextInt();
+
+if(result<randomChoice){
+ System.out.println("too small");
+}
+else if(result>randomChoice){
+ System.out.println("too big");
+ }
+ else{
+System.out.println("Group number " + randomChoice + " has been chosen!");
+break;
+ }
+ }
+
+
+
+    }// end main method
+}
