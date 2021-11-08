@@ -68,6 +68,7 @@ public class CoordinatePlane {
     int x1 = getX(point1);
     int y1 = getY(point1);
 
+<<<<<<< HEAD
     System.out.print("please input another coordinate: ");
     String point2 = s.nextLine();
 
@@ -76,6 +77,36 @@ public class CoordinatePlane {
 
     System.out.println(crowsDistance(x1, y1, x2, y2));
     System.out.println(taxicabDistance(x1, y1, x2, y2));
+=======
+   System.out.print("enter another coordinate (x, y): ");
+    String point2 = s.nextLine();
+
+    System.out.println(point2);
+    //x1
+    int commaPosition = point1.indexOf(",");//2
+    String x1 = point1.substring(1, commaPosition);
+    int Ex1 = Integer.parseInt(x1);
+
+    //y1
+    int commaPosition3 = point1.indexOf(")");//2
+    String y1 = point1.substring(3, commaPosition3);
+    int Ex3 = Integer.parseInt(y1);
+
+    //x2
+    int commaPosition2 = point2.indexOf(",");
+    String x2 = point2.substring(1, commaPosition2);
+    int Ex2 = Integer.parseInt(x2);
+    //y2
+    int commaPosition4 = point2.indexOf(")");//2
+    String y2 = point2.substring(3, commaPosition4);
+    int Ex4 = Integer.parseInt(y2);
+
+     System.out.println("x1= " + Ex1 + " y1= " + Ex3 + " x2= " + Ex2 + " y2= " +Ex4);
+
+
+    //Integer.parseInt(x1)
+
+>>>>>>> c97cab80efc27eb5f43addfee6dd614bb4fc5e97
 
     System.out.println(slope(x1, y1, x2, y2));
   }
