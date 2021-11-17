@@ -28,26 +28,30 @@ public class FracCalc {
     public static String produceAnswer(String input){
       int slashPos = input.indexOf("/");
       int SpacePos = input.indexOf(" ");
-      String eq1 = input.substring(0,SpacePos); //the whole equation
-      String f1 = input.substring(SpacePos+3); //fraction 1
-      String n1 = input.substring(0,slashPos);  // numerator 1
-      String d1 = input.substring(slashPos+1,4); // denominator 1
-      String n2 = input.substring(SpacePos+3,7); // numerator 2
-      String d2 = input.substring(SpacePos+5,9); // denominator 2
 
+      String f1 = input.substring(0,SpacePos); //the whole equation
+      String f2 = input.substring(SpacePos+3); //fraction 1
 
-       System.out.println(f1);
-       System.out.println(n1);
-       System.out.println(d1);
-       System.out.println(n2);
-       System.out.println(d2);
-
-       int d11 = Integer.parseInt(d1);
-       int d22 = Integer.parseInt(d2);
-       int n11 = Integer.parseInt(n1);
-       int n22 = Integer.parseInt(n2);
-       int test = n11 * n22;
-       System.out.println(test);
+      System.out.println(getNum(f1));
+      System.out.println(getNum(f2));
+     //  String n1 = input.substring(0,slashPos);  // numerator 1
+     //  String d1 = input.substring(slashPos+1,SpacePos); // denominator 1
+     //  String n2 = input.substring(SpacePos+3,7); // numerator 2
+     //  String d2 = input.substring(SpacePos+5,9); // denominator 2
+     //
+     //
+     // System.out.println(f1);
+     // System.out.println(n1);
+     // System.out.println(d1);
+     // System.out.println(n2);
+     // System.out.println(d2);
+     //
+     // int d11 = Integer.parseInt(d1);
+     // int d22 = Integer.parseInt(d2);
+     // int n11 = Integer.parseInt(n1);
+     // int n22 = Integer.parseInt(n2);
+     // int test = n22*n11;
+     // System.out.println(test);
 
 
 
@@ -65,6 +69,17 @@ public class FracCalc {
         return "";
     }//end produceAnswer method
 
+    public static int getNum(String frac) {
+      int slashPos = frac.indexOf("/");
+      if("_"){
+        int MixedPos = frac.indexOf("_")!=-1;
+        String num1 = frac.substring(0,MixedPos);
+
+      }
+
+
+      return Integer.parseInt(frac.substring(0, slashPos));
+    }
     // TODO: Fill in the space below with helper methods
 
     /**
