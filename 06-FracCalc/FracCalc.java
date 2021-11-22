@@ -25,13 +25,27 @@ public class FracCalc {
         int Num2 = Integer.parseInt((getNum(f2)));
         int Denom2 = Integer.parseInt((getDenom(f2)));
 
-
+        AddMinus();
+        MultiplyDivide();
 
         System.out.println(Whole1 + Denom1);
         return "";
     }//end produceAnswer method
 
-
+    public static void AddMinus(String produceAnswer){
+        if(produceAnswer.contains("+")){
+          System.out.println(((Num1 * Denom2) + (Num2 * Denom2)) / (Denom1 * Denom2));
+        }else if(produceAnswer.contains("-")){
+          System.out.println(((Num1 * Denom2) - (Num2 * Denom2)) / (Denom1 * Denom2));
+      }
+    }
+    public static void MultiplyDivide(String produceAnswer){
+      if(produceAnswer.contains("*")){
+        System.out.println((Num1 * Num2) / (Denom1 * Denom2));
+      }else{
+        System.out.println((Num1 * Denom2)/(Num2 * Denom1));
+      }
+    }
 
     public static String getWhole(String str){
       if(str.contains("_")){
