@@ -25,27 +25,34 @@ public class FracCalc {
         int Num2 = Integer.parseInt((getNum(f2)));
         int Denom2 = Integer.parseInt((getDenom(f2)));
 
-        AddMinus();
-        MultiplyDivide();
-
-        System.out.println(Whole1 + Denom1);
+        if(input.contains("+")){
+          Add(Num1, Num2, Denom1, Denom2);
+        }
+        else if(input.contains("-")){
+          Minus(Num1, Num2, Denom1, Denom2);
+        }
+        else if(input.contains("*")){
+          Multiply(Num1, Num2, Denom1, Denom2);
+        }
+        else{
+          Divide(Num1, Num2, Denom1, Denom2);
+        }
         return "";
     }//end produceAnswer method
 
-    public static void AddMinus(String produceAnswer){
-        if(produceAnswer.contains("+")){
-          System.out.println(((Num1 * Denom2) + (Num2 * Denom2)) / (Denom1 * Denom2));
-        }else if(produceAnswer.contains("-")){
-          System.out.println(((Num1 * Denom2) - (Num2 * Denom2)) / (Denom1 * Denom2));
+    public static void Add(int Num1 , int Num2 , int Denom1 , int Denom2){
+        System.out.println(((Num1 * Denom2) + (Num2 * Denom2)) + "/" + (Denom1 * Denom2));
       }
-    }
-    public static void MultiplyDivide(String produceAnswer){
-      if(produceAnswer.contains("*")){
-        System.out.println((Num1 * Num2) / (Denom1 * Denom2));
-      }else{
-        System.out.println((Num1 * Denom2)/(Num2 * Denom1));
+    public static void Minus(int Num1 , int Num2 , int Denom1 , int Denom2){
+        System.out.println(((Num1 * Denom2) - (Num2 * Denom2)) + "/" + (Denom1 * Denom2));
       }
-    }
+    public static void Multiply(int Num1 , int Num2 , int Denom1 , int Denom2){
+        System.out.println((Num1 * Num2) + "/" + (Denom1 * Denom2));
+      }
+    public static void Divide(int Num1 , int Num2 , int Denom1 , int Denom2){
+        System.out.println((Num1 * Denom2) + "/" + (Num2 * Denom1));
+      }
+
 
     public static String getWhole(String str){
       if(str.contains("_")){
