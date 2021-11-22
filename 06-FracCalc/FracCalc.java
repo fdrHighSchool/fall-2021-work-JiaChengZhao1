@@ -25,6 +25,9 @@ public class FracCalc {
         int Num2 = Integer.parseInt((getNum(f2)));
         int Denom2 = Integer.parseInt((getDenom(f2)));
 
+        System.out.println(Denom1);
+        System.out.println(Denom2);
+
         if(input.contains("+")){
           Add(Num1, Num2, Denom1, Denom2);
         }
@@ -41,10 +44,10 @@ public class FracCalc {
     }//end produceAnswer method
 
     public static void Add(int Num1 , int Num2 , int Denom1 , int Denom2){
-        System.out.println(((Num1 * Denom2) + (Num2 * Denom2)) + "/" + (Denom1 * Denom2));
+        System.out.println(((Num1 * Denom2) + (Num2 * Denom1)) + "/" + (Denom1 * Denom2));
       }
     public static void Minus(int Num1 , int Num2 , int Denom1 , int Denom2){
-        System.out.println(((Num1 * Denom2) - (Num2 * Denom2)) + "/" + (Denom1 * Denom2));
+        System.out.println(((Num1 * Denom2) - (Num2 * Denom1)) + "/" + (Denom1 * Denom2));
       }
     public static void Multiply(int Num1 , int Num2 , int Denom1 , int Denom2){
         System.out.println((Num1 * Num2) + "/" + (Denom1 * Denom2));
@@ -70,7 +73,7 @@ public class FracCalc {
         else if(str.contains("/")){
           return str.substring(0,str.indexOf('/'));
         }
-        else return "0";
+        else return str;
       }
     public static String getDenom(String str){
       if(str.contains("/")){
