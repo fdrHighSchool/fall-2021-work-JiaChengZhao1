@@ -29,30 +29,30 @@ public class FracCalc {
         System.out.println(Denom2);
 
         if(input.contains("+")){
-          Add(Num1, Num2, Denom1, Denom2);
+          Add(Num1, Num2, Denom1, Denom2, Whole1, Whole2);
         }
         else if(input.contains("-")){
-          Minus(Num1, Num2, Denom1, Denom2);
+          Minus(Num1, Num2, Denom1, Denom2, Whole1, Whole2);
         }
         else if(input.contains("*")){
-          Multiply(Num1, Num2, Denom1, Denom2);
+          Multiply(Num1, Num2, Denom1, Denom2, Whole1, Whole2);
         }
         else{
-          Divide(Num1, Num2, Denom1, Denom2);
+          Divide(Num1, Num2, Denom1, Denom2, Whole1, Whole2);
         }
         return "";
     }//end produceAnswer method
 
-    public static void Add(int Num1 , int Num2 , int Denom1 , int Denom2){
-        System.out.println(((Num1 * Denom2) + (Num2 * Denom1)) + "/" + (Denom1 * Denom2));
+    public static void Add(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
+        System.out.println(((((Whole1 * Denom1) + Num1) * Denom2) + (((Whole2*Denom2) + Num2) * Denom1)) + "/" + (Denom1 * Denom2));
       }
-    public static void Minus(int Num1 , int Num2 , int Denom1 , int Denom2){
+    public static void Minus(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
         System.out.println(((Num1 * Denom2) - (Num2 * Denom1)) + "/" + (Denom1 * Denom2));
       }
-    public static void Multiply(int Num1 , int Num2 , int Denom1 , int Denom2){
+    public static void Multiply(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
         System.out.println((Num1 * Num2) + "/" + (Denom1 * Denom2));
       }
-    public static void Divide(int Num1 , int Num2 , int Denom1 , int Denom2){
+    public static void Divide(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
         System.out.println((Num1 * Denom2) + "/" + (Num2 * Denom1));
       }
 
