@@ -47,13 +47,13 @@ public class FracCalc {
         System.out.println(((((Whole1 * Denom1) + Num1) * Denom2) + (((Whole2*Denom2) + Num2) * Denom1)) + "/" + (Denom1 * Denom2));
       }
     public static void Minus(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
-        System.out.println(((Num1 * Denom2) - (Num2 * Denom1)) + "/" + (Denom1 * Denom2));
+        System.out.println(((((Whole1 * Denom1) + Num1) * Denom2) - (((Whole2*Denom2) + Num2) * Denom1)) + "/" + (Denom1 * Denom2));
       }
     public static void Multiply(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
-        System.out.println((Num1 * Num2) + "/" + (Denom1 * Denom2));
+        System.out.println(((Num1 + (Whole1 * Denom1)) * (Num2 + (Whole2 * Denom2))) + "/" + (Denom1 * Denom2));
       }
     public static void Divide(int Num1 , int Num2 , int Denom1 , int Denom2, int Whole1, int Whole2){
-        System.out.println((Num1 * Denom2) + "/" + (Num2 * Denom1));
+        System.out.println(((Num1 + (Whole1 * Denom1)) * Denom2) + "/" + ((Num2 + (Whole2 * Denom2)) * Denom1));
       }
 
 
