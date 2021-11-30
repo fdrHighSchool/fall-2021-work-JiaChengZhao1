@@ -6,8 +6,11 @@ public class FracCalc {
       Scanner s = new Scanner(System.in);
       System.out.println("Please input your fraction in x/y operation x/y format.");
       String problem = s.nextLine();
-
-      produceAnswer(problem);
+        while(!problem.equalsIgnoreCase("quit")){
+            produceAnswer(problem);
+            System.out.println("Please input your fraction in x/y operation x/y format.");
+            problem = s.nextLine();
+        }
 
     }//end main method
 
@@ -25,8 +28,8 @@ public class FracCalc {
         int Num2 = Integer.parseInt((getNum(f2)));
         int Denom2 = Integer.parseInt((getDenom(f2)));
 
-        System.out.println(Denom1);
-        System.out.println(Denom2);
+        // System.out.println(Denom1);
+        // System.out.println(Denom2);
 
         if(input.contains("+")){
           Add(Num1, Num2, Denom1, Denom2, Whole1, Whole2);
