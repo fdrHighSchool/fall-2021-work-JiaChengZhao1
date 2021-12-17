@@ -4,8 +4,17 @@ public class CentralMeasures {
   public static void main(String[] args) {
     int[] testGrades = {100, 95, 90, 95};
 
+    System.out.print("The mean is: ");
     System.out.println(average(testGrades)); // 95
 
+    System.out.print("The range is: ");
+    System.out.println(findMax(testGrades) - findMin(testGrades));
+
+    System.out.print("The mode is: ");
+    System.out.println(mode(testGrades));
+
+    System.out.print("The median is: ")
+    System.out.println();
     // 100 random values in an array
     int[] randomArray = new int[10];
 
@@ -17,10 +26,6 @@ public class CentralMeasures {
       // store the value in the array
       randomArray[i] = value;
     }
-
-    System.out.println(Arrays.toString(randomArray));
-    System.out.println(average(randomArray));
-    System.out.println(mode(testGrades));
   }
 
   public static double average(int[] arr) {
@@ -65,5 +70,17 @@ public class CentralMeasures {
 
     return max;
   } // end findMax method
+  public static int findMin(int[] arr) {
+    int min = 99999;
+
+    for(int i = 0; i < arr.length; i++) {
+      if(arr[i] < min) {
+        min = arr[i];
+      } // end if statement
+    } // end for loop
+
+    return min;
+  } // end findMin method
+
 
 } // end class
